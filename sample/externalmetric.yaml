@@ -2,10 +2,11 @@ apiVersion: metrics.newrelic/v1alpha1
 kind: ExternalMetric
 metadata:
   name: sample-application
+  namespace: custom-metrics
 spec:
   name: sample-application
   resource:
     resource: "deployment"
   queries:
     - id: sample-application
-      query: "SELECT latest(test.k8s.num) FROM Metric WHERE metricName='test.k8s.num'"
+      query: "SELECT latest(`message`) FROM testhpa"
