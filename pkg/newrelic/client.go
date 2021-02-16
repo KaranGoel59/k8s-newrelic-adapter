@@ -51,6 +51,7 @@ func (c *newRelicClient) Query(nrQuery string) (float64, error) {
 	}
 	resp, err := c.client.NerdGraph.Query(query, variables)
 	if err != nil {
+		klog.V(2).Infof(query, variables)
 		klog.V(2).Infof("error running NerdGraph query: ", err)
 	}
 

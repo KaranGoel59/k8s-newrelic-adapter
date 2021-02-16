@@ -1,4 +1,4 @@
-REGISTRY?=kuperiu
+REGISTRY?=karangoel59
 IMAGE?=k8s-newrelic-adapter
 TEMP_DIR:=$(shell mktemp -d /tmp/$(IMAGE).XXXXXX)
 OUT_DIR?=./_output

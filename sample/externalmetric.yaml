@@ -9,4 +9,4 @@ spec:
     resource: "deployment"
   queries:
     - id: sample-application
-      query: "SELECT latest(`message`) FROM testhpa"
+      query: "SELECT latest(message) FROM testhpa"
